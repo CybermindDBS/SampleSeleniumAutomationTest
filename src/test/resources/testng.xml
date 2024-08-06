@@ -1,0 +1,22 @@
+<suite name="exampleSuite" parallel="tests">
+    <listeners>
+        <listener class-name="testng.listeners.ExtentReporterListener"/>
+    </listeners>
+    <test name="exampleTest">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <exclude name="group1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testng.tests.dropDownTest"/>
+        </classes>
+    </test>
+    <test name="exampleTest2">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="testng.tests.dropDownTest"/>
+        </classes>
+    </test>
+</suite>
